@@ -1,4 +1,5 @@
 import * as React from "react"
+import Layout from '../components/layout'
 
 const pageStyles = {
   color: "#232129",
@@ -16,14 +17,14 @@ const headingAccentStyles = {
 
 const AboutPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>About page</title>
+
+    <Layout pageTitle="About page">
       <h1 style={headingStyles}>
         Congratzzzz
         <span style={headingAccentStyles}>— you just created a About page! </span>
         <span role="img" aria-label="Party popper emojis">🎉🎉🎉</span>
       </h1>
-    </main>
+    </Layout>
   )
 }
 
