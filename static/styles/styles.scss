@@ -1,0 +1,89 @@
+
+.offcanvas {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 22rem;
+    height: 100%;
+    will-change: transform, box-shadow;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),box-shadow 0.3s ease;
+    background-color: #fff;
+    z-index: 1080;
+}
+
+.offcanvas-cap {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding: 1.25rem 1.5rem;
+}
+.offcanvas-body {
+    height: 100%;
+    padding: 0 1.5rem;
+    overflow-y: auto;
+}
+
+.navbar {
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+}
+
+.navbar-shadow {
+    box-shadow: 0 0.125rem 0.625rem -0.1875rem rgb(0 0 0 / 10%);
+}
+
+.header {
+    position: relative;
+    z-index: 1030;
+}
+
+.navbar-floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.bg-faded-primary {
+    background-color: rgba(118,109,244,0.08) !important;
+}
+
+.pt-7 {
+    padding-top: 6rem !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg.navbar {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+    .offcanvas-collapse .offcanvas-cap {
+        display: none;
+    }
+    .offcanvas-collapse .offcanvas-body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .navbar-expand-lg.navbar .offcanvas-body {
+        overflow: visible;
+    }
+    .offcanvas-collapse {
+        display: block;
+        position: static;
+        top: auto;
+        left: auto;
+        max-width: 100%;
+        height: auto;
+        transform: none;
+        background-color: transparent;
+    }
+
+    .pb-lg-7 {
+        padding-bottom: 7rem !important;
+    }
+}
